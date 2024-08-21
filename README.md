@@ -1,1 +1,1 @@
-# data_analysis_Airbnb_Rio_Trainee_CIS
+# Atividades do programa Trainee do CIS IEEE
