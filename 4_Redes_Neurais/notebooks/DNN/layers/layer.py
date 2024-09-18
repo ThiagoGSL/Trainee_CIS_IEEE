@@ -2,7 +2,7 @@ import numpy as np
 
 class Dense:
     def __init__(self, n_in, n_out, initialization = 'He', lambd = 0): 
-        if initialization = None:
+        if initialization == None:
             self.W = 0.01 * np.random.randn(n_out, n_in) #random weights initialization
         elif initialization == 'He':
             self.W = np.random.randn(n_out, n_in) * np.sqrt(2. / n_in) # He Initialization
@@ -13,7 +13,7 @@ class Dense:
         self.Z = np.dot(self.W,A)+self.b
         return self.Z
         
-    def backward(self, dZ):
+    def backward(self, dZ): #IMPLEMENTAR REGULARIZATION
         m = self.A.shape[1]
         self.dW = np.dot(dZ, self.A.T) / m
         self.db = np.sum(dZ, axis=1, keepdims=True)/m
